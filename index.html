@@ -1,7 +1,183 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <title>Flask test</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <a href="#md1">锚点</a>
+    <h1>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</h1><br><hr>
+    <h2>To switch directories, </h2>
+    <p>type <kbd>cd</kbd> followed by the name of the directory.</p><br><hr>
+    To edit settings, press <kbd>Debug = True</kbd><hr>
+    <h1>irh</h1>
+    <ul>
+      <li>new</li>
+      <li>game</li>
+      <li>html5</li>
+      <li>DOCTYPE html</li>
+    </ul>
+    <ol type="a">
+      <li><a href="https://www.baidu.com" target="_blank">baidu</a></li>
+      <li>455</li>
+      <li>54675</li>
+      <li>3478</li>
+    </ol>
+    <dl>
+      <dt>hi</dt>
+      <dd>hello</dd>
+    </dl>
+    <img src="climb.jpg" alt="nonono" width="100" title="hello">
+
+    <div class="">
+      Flask 应用
+      为了测试 Flask 安装，请在编辑器中将以下代码输入 Hello.py：<br>
+
+      from flask import Flask<br>
+      app = Flask(__name__)<br>
+      @app.route('/')<br>
+      def hello_world():<br>
+         return 'Hello World'<br>
+
+      if __name__ == '__main__':<br>
+         app.run()<br>
+      必须在项目中导入Flask模块。 Flask类的一个对象是我们的WSGI应用程序。<br>
+
+      Flask构造函数使用当前模块（__name __）的名称作为参数。<br>
+
+      Flask类的route()函数是一个装饰器，它告诉应用程序哪个URL应该调用相关的函数。<br>
+
+      app.route(rule, options)<br>
+      rule 参数表示与该函数的URL绑定。<br>
+
+      options 是要转发给基础Rule对象的参数列表。<br>
+
+      在上面的示例中，'/ ' URL与hello_world()函数绑定。<br>因此，当在浏览器中打开web服务器的主页时，将呈现该函数的输出。<br>
+
+      最后，Flask类的run()方法在本地开发服务器上运行应用程序。<br>
+
+      app.run(host, port, debug, options)<br>
+      所有参数都是可选的<br>
+      <a id="md1"></a>
+      <h1>MD1</h1>
+      序号	参数与描述<br>
+      1
+      host
+
+      要监听的主机名。 默认为127.0.0.1（localhost）。设置为“0.0.0.0”以使服务器在外部可用<br>
+
+      2
+      port
+
+      默认值为5000<br>
+
+      3
+      debug
+
+      默认为false。 如果设置为true，则提供调试信息<br>
+
+      4
+      options
+
+      要转发到底层的Werkzeug服务器。
+
+      上面给出的Python脚本是从Python shell执行的。<br>
+
+      Python Hello.py<br>
+      Python shell中的消息通知您：<br>
+
+      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)<br>
+      在浏览器中打开上述URL（localhost：5000）。将显示“Hello World”消息。<br>
+
+
+      这里注意，如果使用python自带的idle运行的时候可能会报以下错误：<br>
+      Traceback (most recent call last):<br>
+
+
+      io.UnsupportedOperation: fileno<br>
+      只要不用idle执行就不会出错了，不影响后续使用。改用cmd下Python执行或者pycharm等运行都能成功。<br>
+
+      调试模式
+      通过调用run()方法启动Flask应用程序。但是，当应用程序正在开发中时，应该为代码中的每个更改手动重新启动它。<br>
+      为避免这种不便，请启用调试支持。如果代码更改，服务器将自行重新加载。<br>它还将提供一个有用的调试器来跟踪应用程序中的错误（如果有的话）。<br>
+      在运行或将调试参数传递给run()方法之前，<br>通过将application对象的debug属性设置为True来启用Debug模式。<br>
+
+      app.debug = True<br>
+      app.run()<br>
+      app.run(debug = True)
+      上面给出的Python脚本是从Python shell执行的。<br>
+
+      Python Hello.py<br>
+      Python shell中的消息通知您：<br>
+
+      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)<br>
+      在浏览器中打开上述URL（localhost：5000）。将显示“Hello World”消息。<br>
+
+
+      这里注意，如果使用python自带的idle运行的时候可能会报以下错误：<br>
+      Traceback (most recent call last):<br>
+
+
+      io.UnsupportedOperation: fileno<br>
+      只要不用idle执行就不会出错了，不影响后续使用。改用cmd下Python执行或者pycharm等运行都能成功。<br>
+
+      调试模式
+      通过调用run()方法启动Flask应用程序。但是，当应用程序正在开发中时，应该为代码中的每个更改手动重新启动它。<br>
+      为避免这种不便，请启用调试支持。如果代码更改，服务器将自行重新加载。<br>它还将提供一个有用的调试器来跟踪应用程序中的错误（如果有的话）。<br>
+      在运行或将调试参数传递给run()方法之前，<br>通过将application对象的debug属性设置为True来启用Debug模式。<br>
+
+      app.debug = True<br>
+      app.run()<br>
+      app.run(debug = True)
+      上面给出的Python脚本是从Python shell执行的。<br>
+
+      Python Hello.py<br>
+      Python shell中的消息通知您：<br>
+
+      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)<br>
+      在浏览器中打开上述URL（localhost：5000）。将显示“Hello World”消息。<br>
+
+
+      这里注意，如果使用python自带的idle运行的时候可能会报以下错误：<br>
+      Traceback (most recent call last):<br>
+
+
+      io.UnsupportedOperation: fileno<br>
+      只要不用idle执行就不会出错了，不影响后续使用。改用cmd下Python执行或者pycharm等运行都能成功。<br>
+
+      调试模式
+      通过调用run()方法启动Flask应用程序。但是，当应用程序正在开发中时，应该为代码中的每个更改手动重新启动它。<br>
+      为避免这种不便，请启用调试支持。如果代码更改，服务器将自行重新加载。<br>它还将提供一个有用的调试器来跟踪应用程序中的错误（如果有的话）。<br>
+      在运行或将调试参数传递给run()方法之前，<br>通过将application对象的debug属性设置为True来启用Debug模式。<br>
+
+      app.debug = True<br>
+      app.run()<br>
+      app.run(debug = True)
+
+    </div>
+    <div class="">
+      <table>
+        <caption>table</caption>
+        <tr>
+          1
+          2
+          3
+          4
+          5
+        </tr>
+        <th>2</th>
+        <td>3</td>
+      </table>
+
+    </div>
 </body>
+
 </html>
